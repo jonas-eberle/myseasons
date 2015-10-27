@@ -1,6 +1,8 @@
 # MySeasons App
 The MySeasons App is part of the MyGEOSS project on innovative apps in environmental and social domains and addresses the mobile integration of optical satellite time series data for vegetation phenology monitoring. Users are invited to browse a 15 years global archive of satellite data ‐ derived from NASA’s Moderate Resolution Imaging Spectroradiometer (MODIS) onboard TERRA/AQUA for individual phenological monitoring purposes. MySeasons also integrates crowed sourcing of phenological observations by the individual user. Both – crowed sourced observations by the citizen scientists and satellite-derived phenological metrics can be analysed and collected to analyse and increase the understanding on global environmental change.
 
+The app is published under the European Union Public License (EUPL) Version 1.1. See LICENSE file.
+
 # App Stores
 The app is being published in the Apple App Store and the Google Play Store. Links will follow. 
 
