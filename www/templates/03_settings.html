@@ -1,0 +1,63 @@
+<ion-view view-title="{{ 'SETTINGS' | translate }}">
+  <ion-content>
+    
+	<div class="list settings">
+	
+	  <!--
+	  <div class="item item-toggle">
+	     Allow push notifications
+	     <label class="toggle toggle-assertive">
+	       <input type="checkbox" checked>
+	       <div class="track">
+	         <div class="handle"></div>
+	       </div>
+	     </label>
+	  </div>
+	  -->
+	
+	  <div class="item item-toggle">
+	     {{ 'Allow usage statistics' | translate }}
+	     <label class="toggle toggle-assertive">
+	       <input type="checkbox" ng-model="data.statistics" ng-change="changeAnalytics()" checked>
+	       <div class="track">
+	         <div class="handle"></div>
+	       </div>
+	     </label>
+	  </div>
+	  
+	  <!--
+	  <div class="item item-select">
+	     {{ 'Language' | translate }}
+	     <label>
+	     	<select ng-model="data.language" ng-change="changeLang();">
+		      <option value="en" selected>English</option>
+		      <option value="de">Deutsch</option>
+		    </select>
+	     </label>
+	  </div>
+	  -->
+	  <div class="item item-divider">
+	    {{ 'Default values for data collection form' | translate }}
+	  </div>
+	
+	  <label class="item item-input">
+	    <span class="input-label">Name</span>
+		<input type="text" ng-model="data.pattern_name">
+	  </label>
+	  
+	  <label class="item item-input">
+	    <span class="input-label">Email</span>
+		<input type="text" ng-model="data.pattern_mail">
+	  </label>
+	  
+	  <div class="item item-divider">
+	    {{ 'Local database' | translate }}
+	  </div>
+	  <button class="button button-full button-positive" ng-click="clearStorage()" style="width: 90%;margin: auto; margin-top: 20px;">
+		  {{ 'Clear' | translate }}
+	  </button>
+	  
+	</div>
+	
+  </ion-content>
+</ion-view>

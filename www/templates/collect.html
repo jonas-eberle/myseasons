@@ -1,0 +1,244 @@
+<ion-modal-view style="top: 50px;left: 5px; right: 5px; bottom: 50px; min-height: auto; width:auto;">
+  <ion-header-bar>
+   
+	<h1 class="title">{{ 'DATA_COLLECT' | translate }}</h1>
+      <button class="button button-clear" ng-click="closeCollect()">&times;</button>
+  </ion-header-bar>
+  <ion-content class="collect">
+    <form>
+    
+		<ion-slide-box delegate-handle="modalSlider" on-slide-changed="slideChanged($index)" show-pager="false">
+          <ion-slide class="padding">            
+              <h3 translate="TREE_SPECIES"></h3>
+			  <div class="list baumart">
+		
+				  <label class="item item-radio" ng-click="selectBaum(baum)" ng-repeat="baum in baeume">
+				    <input type="radio" name="group">
+                    <img src="img/{{baum.name}}.jpg" class="collect_img" />
+				    <div class="item-content">{{baum.name | translate}}</div>
+				    <i class="radio-icon ion-checkmark"></i> 
+				  </label>
+			
+			  </div>
+          </ion-slide>
+		  
+		  <ion-slide class="padding">
+		  	<h3>{{ selectedBaum.name+'_LEAFDEVELOPMENT' | translate}}</h3>
+			<hr/>
+			<div class="description">{{ selectedBaum.name+'_LEAFDEVELOPMENT_DESC' | translate}}</div>
+			<div class="list blattentfaltung">
+            
+				 <label for="blattentfaltung_nein" class="item item-radio">
+				    <input id="blattentfaltung_nein" ng-click="changeInput($event)"  type="radio" value="NO" ng-model="collectData.blattentfaltung" name="blattentfaltung">
+				    <div class="option">
+						<img src="img/blattentwicklung_nein.jpg" class="collect_img" />
+	                    <div class="item-content">
+							{{ 'NO' | translate }}
+						</div>
+					    <i class="radio-icon ion-checkmark"></i>
+					</div>
+				  </label>
+                  <label for="blattentfaltung_begin" class="item item-radio">
+				    <input id="blattentfaltung_begin" ng-click="changeInput($event)"  type="radio" value="BEGIN" ng-model="collectData.blattentfaltung" name="blattentfaltung">
+					<div class="option">
+						 <img src="img/blattentwicklung_beginn.jpg" class="collect_img" />
+	                    <div class="item-content">
+					    	{{ 'BEGIN' | translate }} </div>
+					    <i class="radio-icon ion-checkmark"></i>
+					</div>
+				  </label>
+				  
+			</div>
+			  
+			<hr/><h4 class="foto">{{ 'YOUR_FOTO' | translate }}</h4>
+			<input type="hidden" ng-model="collectData.blattentfaltung_image"  />
+			<button class="button" ng-click="foto('blattentfaltung_image')">{{ 'Take a foto' | translate }}</button>
+		    <img src="" id="blattentfaltung_image" width="100" />
+			  
+		  </ion-slide> 
+		  
+		  <ion-slide class="padding">
+		  	<h3>{{ selectedBaum.name+'_FLOWERING' | translate}}</h3>
+			<hr/>
+			<div class="description">{{ selectedBaum.name+'_FLOWERING_DESC' | translate}}</div>
+			<div class="list bluete">
+		
+				  <label for="bluete_begin" class="item item-radio">
+				    <input id="bluete_begin" ng-click="changeInput($event)" type="radio" value="FLOWERING_BEGIN" ng-model="collectData.bluete" name="bluete">
+                   <div class="option">
+					   <img src="img/blossom_start.jpg" class="collect_img" />
+					    <div class="item-content">
+							{{ 'FLOWERING_BEGIN' | translate }}
+						</div>
+					    <i class="radio-icon ion-checkmark"></i>
+					</div>
+				  </label>
+				  <label for="bluete_full" class="item item-radio">
+				    <input id="bluete_full" ng-click="changeInput($event)" type="radio" value="FLOWERING_FULL" ng-model="collectData.bluete" name="bluete">
+                    <div class="option">
+						<img src="img/blossom_full.jpg" class="collect_img" />
+					    <div class="item-content">
+							{{ 'FLOWERING_FULL' | translate }}
+						</div>
+					    <i class="radio-icon ion-checkmark"></i>
+					</div>
+				  </label>
+				  <label for="bluete_end" class="item item-radio">
+				    <input id="bluete_end" ng-click="changeInput($event)" type="radio" value="FLOWERING_END" ng-model="collectData.bluete" name="group">
+                    <div class="option">
+						<img src="img/blossom_end.jpg" class="collect_img" />
+					    <div class="item-content">
+							{{ 'FLOWERING_END' | translate }}
+						</div>
+					    <i class="radio-icon ion-checkmark"></i>
+					</div>
+				  </label>
+			
+			</div>
+			  
+			<hr/><h4 class="foto">{{ 'YOUR_FOTO' | translate }}</h4>
+			<input type="hidden" ng-model="collectData.bluete_image"  />
+			<button class="button" ng-click="foto('bluete_image')">{{ 'Take a foto' | translate }}</button>
+			<img src="" id="bluete_image" width="100" />
+			  
+		  </ion-slide>
+		  
+		  <ion-slide class="padding">
+		  	<h3>{{ selectedBaum.name+'_FRUITMATURITY' | translate}}</h3>
+			<hr/>
+			<div class="description">{{ selectedBaum.name+'_FRUITMATURITY_DESC' | translate}}</div>
+			<div class="list fruchtreife">
+		
+				  <label for="fruchtreife_no" class="item item-radio">
+				    <input id="fruchtreife_no" ng-click="changeInput($event)"  type="radio" value="NO" ng-model="collectData.fruchtreife" name="fruchtreife">
+				    <div class="option">
+						<img src="img/fruchtreife_nein.jpg" class="collect_img" />
+	                    <div class="item-content">
+							{{ 'NO' | translate }}
+						</div>
+					    <i class="radio-icon ion-checkmark"></i>
+					</div>
+				  </label>
+                   <label for="fruchtreife_yes" class="item item-radio">
+				    <input id="fruchtreife_yes" ng-click="changeInput($event)"  type="radio" value="YES" ng-model="collectData.fruchtreife" name="fruchtreife">
+				    <div class="option">
+						<img src="img/fruchtreife_ja.jpg" class="collect_img" />
+	                    <div class="item-content">
+							{{ 'YES' | translate }} </div>
+					    <i class="radio-icon ion-checkmark"></i>
+					</div>
+				  </label>
+			</div>
+			  
+			<hr/><h4 class="foto">{{ 'YOUR_FOTO' | translate }}</h4>
+			<input type="hidden" ng-model="collectData.fruchtreife_image"  />
+			<button class="button" ng-click="foto('fruchtreife_image')">{{ 'Take a foto' | translate }}</button>
+			<img src="" id="fruchtreife_image" width="100" />
+			  
+		  </ion-slide> 
+		  
+		  <ion-slide class="padding ">
+		  	<h3>{{ selectedBaum.name+'_LEAFDISCOLORING' | translate}}</h3>
+			<hr/>
+			<div class="description">{{ selectedBaum.name+'_LEAFDISCOLORING_DESC' | translate}}</div>
+			<div class="list blattentfaltung">
+		
+				  
+				  <label for="blattverfaerbung_no" class="item item-radio">
+				    <input id="blattverfaerbung_no" ng-click="changeInput($event)"  type="radio" value="NO" ng-model="collectData.blattverfaerbung" name="blattverfaerbung">
+                    <div class="option">
+						<img src="img/blattfarbe_nein.jpg" class="collect_img" />
+					    <div class="item-content">
+					    	{{ 'NO' | translate }}
+						</div>
+					    <i class="radio-icon ion-checkmark"></i>
+					</div>
+				  </label>
+                  <label for="blattverfaerbung_yes" class="item item-radio">
+				    <input id="blattverfaerbung_yes" ng-click="changeInput($event)"  type="radio" value="YES" ng-model="collectData.blattverfaerbung" name="blattverfaerbung">
+                    <div class="option">
+						<img src="img/blattfarbe_ja.jpg" class="collect_img" />
+					    <div class="item-content">
+					    	{{ 'YES' | translate }} </div>
+					    <i class="radio-icon ion-checkmark"></i>
+					</div>
+				  </label>
+			
+			</div>
+			  
+			<hr/><h4 class="foto">{{ 'YOUR_FOTO' | translate }}</h4>
+			<input type="hidden" ng-model="collectData.blattverfaerbung_image"  />
+			<button class="button" ng-click="foto('blattverfaerbung_image')">{{ 'Take a foto' | translate }}</button>
+			<img src="" id="blattverfaerbung_image" width="100" />
+			  
+		  </ion-slide> 
+		  
+		  <ion-slide class="padding ">
+		  	<h3>{{ selectedBaum.name+'_DEFOLIATION' | translate}}</h3>
+			<hr/>
+			<div class="description">{{ selectedBaum.name+'_DEFOLIATION_DESC' | translate}}</div>
+			<div class="list blattfall">
+		
+				   <label for="blattfall_no" class="item item-radio">
+				    <input id="blattfall_no" ng-click="changeInput($event)"  type="radio" value="NO" ng-model="collectData.blattfall" name="blattfall">
+				    <div class="option">
+						<img src="img/blattfall_nein.jpg" class="collect_img" />
+					    <div class="item-content">
+	                        {{ 'NO' | translate }}
+						</div>
+					    <i class="radio-icon ion-checkmark"></i>
+					</div>
+				  </label>
+                  <label for="blattfall_yes" class="item item-radio">
+				    <input id="blattfall_yes" ng-click="changeInput($event)"  type="radio" value="YES" ng-model="collectData.blattfall" name="blattfall">
+                    <div class="option">
+						<img src="img/blattfall_ja.jpg" class="collect_img" />
+					    <div class="item-content">
+	                         {{ 'YES' | translate }} </div>
+					    <i class="radio-icon ion-checkmark"></i>
+					</div>
+				  </label>
+				 
+			
+			</div>
+			  
+			<hr/><h4 class="foto">{{ 'YOUR_FOTO' | translate }}</h4>
+			<input type="hidden" ng-model="collectData.blattfall_image"  />
+			<button class="button" ng-click="foto('blattfall_image')">{{ 'Take a foto' | translate }}</button>
+			<img src="" id="blattfall_image" width="100" />
+			  
+		  </ion-slide> 
+		  
+          <ion-slide class="padding allgemein">
+              <h3 translate="GENERAL"></h3>
+			  
+			  <h4 translate="YOUR_POSITION"></h4>
+			  <label><strong>{{ 'LATITUDE' | translate }}: </strong></label>{{collectData.lat}}<br />
+			  <label><strong>{{ 'LONGITUDE' | translate }}: </strong></label>{{collectData.lon}}
+			  
+			  <h3>{{ 'RIGHTS_USE' | translate }}*</h3>
+			  <label class="checkbox"><input type="checkbox" ng-model="collectData.nutzung" /></label><a ng-click="showRightsOfUse()" style="text-decoration:underline;">{{ 'RIGHTS_USE_DESC' | translate }}</a>
+			  
+			  <h3 translate="CONTACTS"></h3>
+		      <div class="list">
+		        <label class="item item-input">
+		          <span class="input-label">Name</span>
+		          <input type="text" ng-model="collectData.name">
+		        </label>
+		        <label class="item item-input">
+		          <span class="input-label">Email</span>
+		          <input type="text" ng-model="collectData.mail">
+		        </label>
+		      </div>
+          </ion-slide>
+        </ion-slide-box>
+	  
+    </form>
+  </ion-content>
+  
+  <ion-footer-bar>
+		<button id="prevSlide" ng-click="prevSlide()" style="display:none;width: 30%;float:left;margin-right: 5%;" class="button button-positive" translate="PREVIOUS">Previous</button>
+		<button id="nextSlide" ng-click="checkCollectForm()" style="display:none;width: 30%;float:right;" class="button button-positive" translate="NEXT">Next</button>
+	</ion-footer-bar>
+  
+</ion-modal-view>

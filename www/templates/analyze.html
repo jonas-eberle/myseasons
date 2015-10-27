@@ -1,0 +1,52 @@
+<ion-modal-view style="top: 50px;left: 5px; right: 5px; bottom: 50px; min-height: auto; width:auto;">
+  <ion-header-bar>
+    <h1 class="title">{{data_analysis.type | translate}}</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeLogin()">&times;</button>
+    </div>
+    
+  </ion-header-bar>
+  <ion-content style="padding: 10px;">
+    <div class="properties">
+    	<div class="box chart" ng-if="data_analysis.type == 'Data collection'">
+		    	<h4>{{ 'YOUR_INPUTS' | translate }}</h4>
+				<strong>{{ 'TREE_SPECIES' | translate }}: </strong>{{data_analysis.inputdata.baum | translate}}<br />
+				<div ng-if="data_analysis.inputdata.blattentfaltung"><strong>{{ 'LEAFDEVELOPMENT' | translate }}: </strong>{{data_analysis.inputdata.blattentfaltung | translate}}</div>
+				<div ng-if="data_analysis.inputdata.bluete"><strong>{{ 'FLOWERING' | translate }}: </strong>{{data_analysis.inputdata.bluete | translate}}</div>
+				<div ng-if="data_analysis.inputdata.blattfall"><strong>{{ 'DEFOLIATION' | translate }}: </strong>{{data_analysis.inputdata.blattfall | translate}}</div>
+				<div ng-if="data_analysis.inputdata.fruchtreife"><strong>{{ 'FRUITMATURITY' | translate }}: </strong>{{data_analysis.inputdata.fruchtreife | translate}}</div>
+				<div ng-if="data_analysis.inputdata.blattverfaerbung"><strong>{{ 'LEAFDISCOLORING' | translate }}: </strong>{{data_analysis.inputdata.blattverfaerbung | translate}}</div>
+		</div>
+		<table width="100%">
+        <tr><td colspan="2"><strong>{{ 'TIMESTAMP' | translate }}: </strong>{{data_analysis.timestamp}}</td></tr>
+        <tr><td><strong>{{ 'LATITUDE' | translate }}: </strong>{{data_analysis.lat}}</td>
+			<td><strong>{{ 'LONGITUDE' | translate }}: </strong>{{data_analysis.lon}}</td></tr>
+        </table>
+        <hr/>
+	</div>
+	
+	<div class="results" style="margin-top: 10px;">
+		{{ 'Please slide the resulting images:' | translate }}
+		<ion-slide-box on-slide-changed="slideHasChanged($index)" style="padding-bottom: 10px;">
+		  <ion-slide>
+		    <div class="box chart"><h4>{{ 'TIME_OF_SEASON' | translate }}</h4><img src="{{data_analysis.phenoChart}}" width="100%" /></div>
+		  </ion-slide>
+		  <ion-slide>
+		    <div class="box timeseries"><h4>{{ 'TIMESERIES' | translate }}</h4><img src="{{data_analysis.tsPlot}}" width="100%" /></div>
+		  </ion-slide>
+		  <ion-slide>
+		    <div class="box chart"><h4>{{ 'TIMESAT' | translate }}</h4><img src="{{data_analysis.timesat}}" width="100%" /></div>
+		  </ion-slide>
+		</ion-slide-box>
+		
+	</div>
+	
+  </ion-content>
+  
+  <ion-footer-bar>
+		<button ng-click="share();" style="width: 30%;float:left;margin-right: 5%;" class="button button-positive icon icon-left ion-ios-upload-outline">{{ 'SHARE' | translate }}</button>  <!-- AND ion-android-share -->
+		<button ng-click="export();" style="width: 30%;float:left;" class="button button-positive icon icon-left ion-ios-download-outline">{{ 'ZIP' | translate }}</button>
+		<button ng-click="closeLogin()" style="width: 30%;float:right;" class="button button-positive icon icon-left ion-android-close">{{ 'CLOSE' | translate }}</button>
+	</ion-footer-bar>
+  
+</ion-modal-view>

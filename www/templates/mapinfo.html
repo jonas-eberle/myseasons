@@ -1,0 +1,18 @@
+<ion-modal-view style="top: 50px;left: 5px; right: 5px; bottom: 50px; min-height: auto; width:auto;">
+  <ion-header-bar>
+    <h1 class="title">{{currentInfoTypeName | translate}}</h1>
+    <div class="buttons">
+      <button class="button button-clear" ng-click="closeMapInfo()">&times;</button>
+    </div>
+    
+  </ion-header-bar>
+  <ion-content style="padding: 10px;">
+    	<div ng-if="currentInfoType == 'mcd12q2'">
+			{{ 'MCD12Q2_TEXT' | translate }}
+		</div>
+		<div ng-if="currentInfoType == 'mod13q1_trend'">
+			{{ 'MOD13Q1_TREND_TEXT' | translate }}
+		</div>
+  </ion-content>
+  
+</ion-modal-view>

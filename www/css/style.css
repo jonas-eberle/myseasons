@@ -1,0 +1,341 @@
+/* Empty. Add your own CSS if you like */
+@font-face{ 
+	font-family: 'MuseoSlab';
+	src: url('../fonts/museo_slab_500-webfont.eot');
+	src: url('../fonts/museo_slab_500-webfont.eot?#iefix') format('embedded-opentype'),
+	     url('../fonts/museo_slab_500-webfont.woff') format('woff'),
+	     url('../fonts/museo_slab_500-webfont.ttf') format('truetype'),
+	     url('../fonts/museo_slab_500-webfont.svg#webfont') format('svg');
+}
+
+body {color: #444;font-family:"MuseoSlab";}
+
+#map {
+width: 100%;
+bottom: 0px;
+top: 0px;
+position: absolute !important;
+z-index: 0;
+}
+
+.scroll {
+  height: 100%;
+}
+
+.gm-style-mtc {
+    display: none;
+}
+
+.map-buttons .button {
+	font-size: 1em;
+    white-space: normal;
+    line-height: 1.5em;
+}
+
+body {}
+.menu-open .menu-content.pane.menu-animated {-webkit-transform: scale(0.85) translate3d(200px, 0, 0) !important;  }
+ion-side-menus.pane.view, ion-side-menu.menu.menu-left {background: transparent!important;}
+ion-side-menu a.item-content, ion-item.item.item-complex, ion-side-menu.menu.menu-left ion-header-bar {background: transparent!important;border: none;color: white;}
+
+.modal {
+	top: 20px!important;
+	right: 15px!important;
+	bottom: 20px!important;
+	left: 15px!important;
+	min-height: 240px;
+	width: 60%;
+	box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+}
+	
+.modal-backdrop-bg {
+    -webkit-transition: opacity 300ms ease-in-out;
+	transition: opacity 300ms ease-in-out;
+	background-color: #000;
+	opacity: 0;
+}
+
+.active .modal-backdrop-bg {
+	opacity: 0.5;
+}
+
+img#backimg {
+	position: fixed;
+	top:0;
+	bottom:0;
+	height: 100%;
+	-webkit-filter: blur(1px);
+  -moz-filter: blur(1px);
+  -o-filter: blur(1px);
+  -ms-filter: blur(1px);
+  filter: blur(1px);
+}
+
+.menu-left .has-header {top: 154px!important; }
+.menu-left h1.title  {height: 100px!important; top: 40px!important;}
+.menu-left h1.title img {height: 100%;}
+
+
+.menu-left .item {margin-top: 4px;}
+.menu-left .item a {background: rgba(255,255,255,0.8)!important; color: #f39200 !important;font-weight: bold;padding-left: 40px; font-family:"MuseoSlab";}
+
+.menu-left .item.active a {background: rgba(243,146,0,0.8)!important; color: white!important; padding-left: 30px;}
+.menu-left .item.active  {border-left: 10px solid rgba(255,255,255,0.8);}
+
+
+
+.bar-header {background: #F39201!important;}
+.bar.bar-stable .title, .bar-stable .button.button-clear, .modal h1 {color: white!important;font-family:"MuseoSlab"; font-weight: bold!important;}
+
+.modal .bar-header .button-clear {font-size: 2.5em!important; margin-top: -8px;margin-right: 2px; color: white;}
+
+.pane, .view { background: url("../img/background2.jpg") no-repeat center center fixed!important; background-size: cover!important;}  /*cover*/
+.platform-android .pane, .platform-android .view { background: #fefaf1!important;}  /*cover*/
+
+.home .item-divider {
+    background-color: white;
+    border-top: 3px solid rgba(243,146,0,1)!important;
+    color: rgba(243,146,0,1);
+    margin: 0px 1px!important;
+	border-radius: 0!important;
+	font-family:"MuseoSlab";
+}
+
+.settings .item-divider, .home h2 {
+    color: #666!important; 
+	font-family:"MuseoSlab";
+	background: transparent!important;
+	padding-top: 25px;
+}
+
+h4, .collect h3 {
+    color: #666!important; 
+	font-family:"MuseoSlab";
+}
+
+.ion-record::before {
+	font-size: 12px;
+	top: -4px;
+	position: relative;
+}
+
+
+.item-divider span {color: #666; font-size: 0.9em;}
+	
+	
+.card {box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);border-radius: 0px!important;}
+.card .item {border: none;}
+
+
+.map-buttons .button {border: 2px solid white!important;border-radius: 0!important; line-height: 126%; min-height: 0px!important;font-family:"MuseoSlab"; padding: 5px 15px;
+}
+.map-buttons .button:nth-child(2), .map-buttons .button:nth-child(3) {border-left: none!important;}
+.map-buttons .button-positive,.map-buttons .button:focus, .map-buttons .button:hover {background: #94c11f;color:white;}
+
+
+.bar-footer {border-top: 2px solid #F39201!important;}
+.bar {background-image: none!important;}
+
+
+.maps_footer {float: left; width: 50%;}
+.maps_footer:nth-child(1), .maps_footer:nth-child(1):hover, .maps_footer:nth-child(1):focus {border-right: 2px solid #444;}
+
+
+.toggle.toggle-assertive input:checked + .track {
+    border-color: #94c11f;
+    background-color: #94c11f;
+}
+
+.list.baumart .item {
+	width: 50%;
+	float: left;
+}
+
+.slider-pager {
+	bottom: 0;	
+}
+
+.bar-footer .button.button-positive {
+	/*border-color: #f6ad41!important;
+	background-color: #f6ad41!important;*/
+	font-family:"MuseoSlab";
+	background: none!important;
+	color: #444!important;
+	border-color: #aaa!important;
+}
+
+.bar-footer .button.button-positive:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.bar-footer .button.button-positive.active, .bar-footer .button.button-positive.activated {
+    border-color: #F39201!important;
+	background-color: #F39201!important;
+}
+
+.bar-footer .button.button-positive.button-clear {
+    border-color: transparent;
+    background: none;
+    box-shadow: none;
+    color: #387ef5;
+}
+
+.foto {clear: both;}
+
+hr {height: 0; border: 0; border-bottom: 2px solid #DDDDDD; clear:both;}
+
+.collect h3 {margin-bottom: 2px; font-size: 20px;}
+
+.list.baumart, .list.blattentfaltung,  .fruchtreife, .blattfall {text-align: center;}
+
+.list.baumart .item, .list.blattentfaltung .item,  .fruchtreife .item, .blattfall .item {margin: 3% !important;
+margin-top:0px!important;
+width: 27%;
+text-align: center;
+display: inline-block; border: none;}
+
+.list.bluete .item {margin: 3% !important;
+margin-top:0px!important;
+width: 27%;
+text-align: center;
+float: left; border: none;}
+
+/*.item-radio input.ng-valid-parse ~ .item-content {color: #f39201; background: none;}
+.item-radio input.ng-valid-parse ~ img {border: 4px solid #f39201;  }*/
+
+.option.active .item-content {color: #f39201; background: none;}
+.option.active img {border: 4px solid #f39201;  }
+
+.item-radio .radio-icon.ion-checkmark {display: none;}
+.item-radio .item-content {padding: 10px 5px;font-size:14px;}
+
+#bluete_image:before {
+    content: "\f118";
+	display: inline-block;
+    font-family: "Ionicons";
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+}
+
+.home-footer {background: url('../img/eu_flag_yellow_low.jpg')!important;
+background-size: 50px!important;
+background-repeat: no-repeat!important;
+background-color: white!important;
+background-position: 4px 4px!important;
+padding-left:60px!important;}
+
+.home-footer  a {
+	text-decoration: none;
+	color: black;
+}
+
+#start {font-family:"MuseoSlab";
+font-size:20px;
+font-weight: bold;background-color: #be1622!important;}
+
+.icon-innermap {position: fixed;right: 10px;bottom: 10px; color: white!important; border: 1px solid white!important; border-radius: 3px!important;     width: 50px;
+    height: 50px!important;
+    padding-left: 0px;
+    padding-top: 3px;opacity: 0.7;}
+	
+	
+.icon-innermap.active {background: rgba(255,255,255,0.7)!important;color: #f39201!important; opacity: 1!important;border: none!important;}
+
+.collect_img {width:100%;
+border-radius:300px;
+border: 0.5px solid #C1C1C1;
+}
+
+.list.baumart label {border: none;}
+
+.list.baumart  .item-content.ng-binding, .list.bluete .item-content.ng-binding, .list.blattentfaltung .item-content.ng-binding, .fruchtreife .item-content.ng-binding, .blattfall .item-content.ng-binding {
+	padding-bottom: 0px;
+white-space: normal !important;
+font-size: 12px;
+height: 35px;
+padding: 0;}
+
+div.legende {
+	background: white;
+	padding: 2px;
+	padding-top: 1px;
+}
+
+.map-buttons.button-bar, div.legende {
+	position: relative;
+	z-index: 100;
+}
+
+/*google*/
+.gmnoprint {display: none;}
+/*TODO:
+- Active State in Navigation
+
+*/
+
+#loading-bar .bar, #loading-barr {
+	background: white!important;
+}
+
+.platform-ios #loading-bar .bar, .platform-ios #loading-barr {
+    height: 18px!important;
+	background: white!important;
+}
+
+#loading-bar .peg {
+    -moz-box-shadow: #fff 1px 0 6px 1px;
+    -ms-box-shadow: #fff 1px 0 6px 1px;
+    -webkit-box-shadow: #fff 1px 0 6px 1px;
+    box-shadow: #fff 1px 0 6px 1px;
+
+}
+
+#loading-bar-spinner .spinner-icon {
+    border-top-color: #fff!important;
+    border-left-color: #fff!important;
+	display: none;
+}
+
+.button.button-positive {
+	border-color: rgba(243,146,1,1);
+	background-color: rgba(243,146,1,0.9);
+}
+
+.button.button-positive.active, .button.button-positive.activated {
+    border-color: rgba(243,146,1,1);
+    background-color: rgba(243,146,1,1);
+}
+
+.button.button-positive.button-clear {
+    color: rgba(243,146,1,1);
+}
+
+
+@media screen and (orientation:landscape) {
+	.menu-left .bar {margin-top: -30px!important;}
+	.menu-left .has-header {top: 134px!important; }
+	.item-complex .item-content {padding: 8px 49px 8px 16px;}
+	.list.baumart .item, .list.bluete .item, .list.blattentfaltung .item, .fruchtreife .item, .blattfall .item {margin: 2%!important; width:16%; text-align: center;float:left;}
+	img#backimg {top: -20%; width: 100%; height: auto;}
+}
+
+ol.popupros {
+	list-style-type: decimal;
+}
+
+ol.popupros li {
+	margin-left: 15px;	
+}
+
+.platform-ios.platform-cordova:not(.fullscreen) .modal-wrapper .bar-header:not(.bar-subheader) {
+	height: 44px;
+}
+.platform-ios.platform-cordova:not(.fullscreen) .modal-wrapper .bar-header:not(.bar-subheader)>* {
+	margin-top: 0;
+}

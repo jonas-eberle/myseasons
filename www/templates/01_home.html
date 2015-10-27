@@ -1,0 +1,42 @@
+<ion-view view-title="MySeasons">
+  <ion-content class="padding home">
+  	
+    <div class="list card" style="margin-top: 10px;">
+    
+      <div class="item item-divider">
+      	{{ 'WELCOME' | translate }}
+		<a style="text-decoration: none;float: right;margin-top: -4px;margin-right: -8px;font-size: 1.6em;color: black;" href="" ng-click="close($event)">&times;</a>
+	  </div>
+      <div class="item item-body">
+      <i class="icon ion-ios-information" style="float: left;margin-right: 10px; font-size: 4em; color: #ccc;"></i>
+        <div>
+           {{ 'HOME_DESC_1' | translate }}<br /><br />{{ 'HOME_DESC_2' | translate }}
+        </div>
+      </div>
+    </div>
+	
+	<a menu-close href="#/app/maps" class="button button-full button-assertive ion-chevron-right icon-right " id="start"><i class="icon ion-map" style="margin-right: 10px;"></i>  {{ 'START_EXPLORING' | translate }}</a>
+
+	<h2>{{ 'ACTIVITIES' | translate }}</h2>
+	
+	<div class="list card" ng-click="showCard(item)" ng-repeat="item in data.activities">
+      <div class="item item-divider">
+      	{{item.type | translate }}
+		<a style="text-decoration: none;float: right;margin-top: -4px;margin-right: -8px;font-size: 1.6em;color: #666; margin-left: 10px;" href="" ng-click="delete($event, item);$event.stopPropagation();" class="ion-trash-a"></a>
+		<span style="float:right">{{item.pubDateStr}}</span>
+	  </div>
+      <div class="item item-body">
+        <div>
+          <strong>{{ 'LATITUDE' | translate }}: </strong>{{item.pos_lat}}<br />
+		  <strong>{{ 'LONGITUDE' | translate }}: </strong>{{item.pos_lon}}
+        </div>
+      </div>
+    </div>
+	<br/><br/>
+  </ion-content>
+  
+  <ion-footer-bar class="bar-light home-footer" style="font-size:0.7em;line-height: 1.2em;">
+  		<a href="#/app/funding" menu-close>This application has been developed within the MyGEOSS project, which has received funding from the European Union's Horizon 2020 research and innovation programme. Read more...</a>
+  </ion-footer-bar>
+  
+</ion-view>

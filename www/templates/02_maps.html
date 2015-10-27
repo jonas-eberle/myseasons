@@ -1,0 +1,43 @@
+<ion-view view-title="{{ 'MAPS' | translate }}">
+  <ion-content>
+	<div class="map-buttons button-bar">
+	  <a id="map_satellite" class="button button-positive" ng-click="changeMap('hybrid', $event)">Open Street Map</a>
+	  <a class="button" ng-click="changeMap('mcd12q2', $event)">{{ 'START_SEASON_MAP' | translate }}</a>
+	  <a class="button" ng-click="changeMap('mod13q1_trend', $event)">{{ 'VEGETATIOIN_TREND_MAP' | translate }}</a>
+	</div>
+    <div class="legende" id="legende1" style="display:none">
+      	<div style="width: 84%; float: left; font-size: 0.7em;">
+        	<img src="img/verlauf1.png" width="100%"/>
+            <span style="float: left;margin-top: -9px;">{{ 'January' | translate }}</span>
+            <span style="float:right;margin-top: -9px;">{{ 'December' | translate }}</span>
+        </div>
+        <div style="width: 15%; float: right; text-align:right">
+        	 <a ng-click="info('mcd12q2')" class="button-icon icon ion-information-circled "> </a>
+        </div>
+        <br style="clear:both;"/>
+      </div>
+      
+       <div class="legende" id="legende2" style="display:none">
+      	<div style="width: 84%; float: left; font-size: 0.7em;">
+        	<img src="img/verlauf2.png" width="100%"/>
+            <span style="float: left;margin-top: -9px;">-0,3</span>
+            <span style="float:right;margin-top: -9px;">+0,3</span>
+        </div>
+        <div style="width: 15%; float: right; text-align:right">
+        	 <a ng-click="info('mod13q1_trend')" class="button-icon icon ion-information-circled "> </a>
+        </div>
+        <br style="clear:both;"/>
+      </div>
+
+
+
+    <div id="map" data-tap-disabled="true"></div>
+
+    <button id="findLocation" ng-click="findLocation(true);" class="button button-icon icon button-positive icon-innermap ion-navigate"></button>
+  </ion-content>
+  <ion-footer-bar>
+
+      <a ng-click="analyze()" class="button button-icon icon ion-stats-bars maps_footer">  {{ 'ANALYZE' | translate }}</a>
+	  <a ng-click="collect()" class="button button-icon icon ion-ios-box maps_footer">  {{ 'COLLECT' | translate }}</a>
+    </ion-footer-bar>
+</ion-view>
