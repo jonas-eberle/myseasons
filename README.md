@@ -16,15 +16,15 @@ The development is based on following libraries:
 * Leaflet
 
 # Contact
-Friedrich-Schiller-University Jena
-Institute for Geography
+Friedrich-Schiller-University Jena  
+Institute for Geography  
 Department for Earth Observation
 
-M.Sc. Jonas Eberle
-Dr. Christian Hüttich
+M.Sc. Jonas Eberle  
+Dr. Christian Hüttich  
 Prof. Dr. Christiane Schmullius
 
-Mail: jonas.eberle@uni-jena.de
+Mail: jonas.eberle@uni-jena.de  
 Web: http://www.eo.uni-jena.de
 
 # Funding
