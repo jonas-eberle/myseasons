@@ -85,6 +85,5 @@ print
 "Content-Type: text/json;charset=utf-8"
 print
 ""
-
 print
 analysis.text
