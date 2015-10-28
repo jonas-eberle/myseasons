@@ -56,9 +56,6 @@ outputs['timesatPlot'] = result['timesatPlot']
 # outputs['pointBBOX'] = 'POLYGON ((9.818954090437717 49.610416662229603,9.822169203102829 49.610416662229603,9.821749429968433 49.608333328880839,9.818534454708601 49.608333328880839,9.818954090437717 49.610416662229603))'
 # outputs['timesatPlot'] = 'http://artemis.geogr.uni-jena.de/pywps/tmp/1ebad46c-0715-4f55-8559-b21e8f8a405e/timesat_2015-08-31T20-53-56.146830/phenology_chart.png'
 
-print
-"Content-Type: text/json;charset=utf-8"
-print
-""
-print
-json.dumps(outputs)
+print "Content-Type: text/json;charset=utf-8"
+print ""
+print json.dumps(outputs)

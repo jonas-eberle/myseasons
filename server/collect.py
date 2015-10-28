@@ -81,9 +81,6 @@ analysis = requests.get(
     'http://artemis.geogr.uni-jena.de/mySeasons/analysis?pointY=' + str(data['lat']) + '&pointX=' + str(
         data['lon']) + '&marker=true')
 
-print
-"Content-Type: text/json;charset=utf-8"
-print
-""
-print
-analysis.text
+print "Content-Type: text/json;charset=utf-8"
+print ""
+print analysis.text
